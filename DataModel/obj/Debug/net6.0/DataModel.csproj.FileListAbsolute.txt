@@ -1,0 +1,52 @@
+C:\Users\ADMIN\Downloads\WebAPI\BanHang\DataModel\bin\Debug\net6.0\DataModel.deps.json
+C:\Users\ADMIN\Downloads\WebAPI\BanHang\DataModel\bin\Debug\net6.0\DataModel.dll
+C:\Users\ADMIN\Downloads\WebAPI\BanHang\DataModel\bin\Debug\net6.0\DataModel.pdb
+C:\Users\ADMIN\Downloads\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Downloads\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Downloads\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Downloads\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfo.cs
+C:\Users\ADMIN\Downloads\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Downloads\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.dll
+C:\Users\ADMIN\Downloads\WebAPI\BanHang\DataModel\obj\Debug\net6.0\refint\DataModel.dll
+C:\Users\ADMIN\Downloads\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.pdb
+C:\Users\ADMIN\Downloads\WebAPI\BanHang\DataModel\obj\Debug\net6.0\ref\DataModel.dll
+D:\Teaching\Demo\WebAPI\BanHang\DataModel\bin\Debug\net6.0\DataModel.deps.json
+D:\Teaching\Demo\WebAPI\BanHang\DataModel\bin\Debug\net6.0\DataModel.dll
+D:\Teaching\Demo\WebAPI\BanHang\DataModel\bin\Debug\net6.0\DataModel.pdb
+D:\Teaching\Demo\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.csproj.AssemblyReference.cache
+D:\Teaching\Demo\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Teaching\Demo\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfoInputs.cache
+D:\Teaching\Demo\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfo.cs
+D:\Teaching\Demo\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.csproj.CoreCompileInputs.cache
+D:\Teaching\Demo\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.dll
+D:\Teaching\Demo\WebAPI\BanHang\DataModel\obj\Debug\net6.0\refint\DataModel.dll
+D:\Teaching\Demo\WebAPI\BanHang\DataModel\obj\Debug\net6.0\DataModel.pdb
+D:\Teaching\Demo\WebAPI\BanHang\DataModel\obj\Debug\net6.0\ref\DataModel.dll
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\bin\Debug\net6.0\DataModel.deps.json
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\bin\Debug\net6.0\DataModel.dll
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\bin\Debug\net6.0\DataModel.pdb
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\obj\Debug\net6.0\DataModel.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\obj\Debug\net6.0\DataModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfo.cs
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\obj\Debug\net6.0\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\obj\Debug\net6.0\DataModel.dll
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\obj\Debug\net6.0\refint\DataModel.dll
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\obj\Debug\net6.0\DataModel.pdb
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\obj\Debug\net6.0\ref\DataModel.dll
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\bin\Debug\net6.0\DataModel.runtimeconfig.json
+C:\Users\Admin\Documents\Zalo Received Files\BanHang01\DataModel\obj\Debug\net6.0\DataModel.genruntimeconfig.cache
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\bin\Debug\net6.0\DataModel.deps.json
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\bin\Debug\net6.0\DataModel.runtimeconfig.json
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\bin\Debug\net6.0\DataModel.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\bin\Debug\net6.0\DataModel.pdb
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\obj\Debug\net6.0\DataModel.csproj.AssemblyReference.cache
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\obj\Debug\net6.0\DataModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfoInputs.cache
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfo.cs
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\obj\Debug\net6.0\DataModel.csproj.CoreCompileInputs.cache
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\obj\Debug\net6.0\DataModel.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\obj\Debug\net6.0\refint\DataModel.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\obj\Debug\net6.0\DataModel.pdb
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\obj\Debug\net6.0\DataModel.genruntimeconfig.cache
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\DataModel\obj\Debug\net6.0\ref\DataModel.dll
