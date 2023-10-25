@@ -1,7 +1,11 @@
-﻿using BusinessLogicLayer;
-using DataAccessLayer;
+﻿using BusinessLogicLayer.Interfaces;
+using DataAccessLayer.Interfaces;
 using DataModel;
-using System.Reflection;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
@@ -24,6 +28,10 @@ namespace BusinessLogicLayer
         public bool Update(HoaDonModel model)
         {
             return _res.Update(model);
+        }
+        public bool Delete(int id)
+        {
+            return _res.Delete(id);
         }
         public List<ThongKeKhachModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, DateTime? to_NgayTao)
         {

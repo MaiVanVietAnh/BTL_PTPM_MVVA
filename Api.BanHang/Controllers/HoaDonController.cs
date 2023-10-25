@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer;
+using BusinessLogicLayer.Interfaces;
 using DataModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -34,9 +35,16 @@ namespace Api.BanHang.Controllers
             _hoadonBusiness.Update(model);
             return model;
         }
-
+        [Route("delete-hoadon")]
+        [HttpDelete]
+        public IActionResult DeleteItem(int id)
+        {
+            _hoadonBusiness.Delete(id);
+            return Ok(id);
+        }
         [Route("search")]
         [HttpPost]
+
         public IActionResult Search([FromBody] Dictionary<string, object> formData)
         {
             try

@@ -8,19 +8,18 @@ namespace DataModel
 {
     public class HoaDonModel
     {
-        public int MaHoaDon { get; set; }
-        public string TenKH { get; set; }
-        public string Diachi { get; set; }
-        public bool TrangThai { get; set; }
-        public List<ChiTietHoaDonModel> list_json_chitiethoadon { get; set; }
+        public String MaHoaDonBan { get; set; }
+        public string MaKhachHang { get; set; }
+        public DateTime NgayBan { get; set; }
+        public string ThanhTien { get; set; }
+        public List<ChiTietHoaDonModel> list_json_chitiethoadonban { get; set; }
     }
     public class ChiTietHoaDonModel
     {
-        public int MaChiTietHoaDon { get; set; }
-        public int MaHoaDon { get; set; }        
-        public int MaSanPham { get; set; }
+        public int MaChiTietHoaDonBan { get; set; }
+        public int MaHoaDonBan { get; set; }        
+        public string MaSanPham { get; set; }
         public int SoLuong { get; set; }
-        public double TongGia { get; set; }
-        public int status { get; set; }
+        public double GiaBan { get; set; }
     }
 }

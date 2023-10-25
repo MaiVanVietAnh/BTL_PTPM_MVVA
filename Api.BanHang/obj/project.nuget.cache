@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M2bWIy5lhXkt8UoUMrYzJM8rUo9ZwajbpUQ3nUbV7kLNj7JTpvuEc6ulLKz9uEq/ie3n35XSDrefy0QFzRaw5w==",
+  "dgSpecHash": "lz/REKBahGd1GlWhHmfdUE7DLs203nu6aVsJ/OFwZcJeZhVOaGcDvJebZ8zDlvkrGq2ugU5cpOa9EmkDltrjww==",
   "success": true,
-  "projectFilePath": "D:\\ONEDRIVE\\Desktop\\PTPM_BTL_MVVA\\Api.BanHang\\Api.BanHang.csproj",
+  "projectFilePath": "D:\\ONEDRIVE\\Desktop\\PTPM_BTL_MVVA\\Api.BanHang\\Api.BanMyPham.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

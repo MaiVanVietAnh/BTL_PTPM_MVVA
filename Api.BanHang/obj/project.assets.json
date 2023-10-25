@@ -9404,9 +9404,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ONEDRIVE\\Desktop\\PTPM_BTL_MVVA\\Api.BanHang\\Api.BanHang.csproj",
-      "projectName": "Api.BanHang",
-      "projectPath": "D:\\ONEDRIVE\\Desktop\\PTPM_BTL_MVVA\\Api.BanHang\\Api.BanHang.csproj",
+      "projectUniqueName": "D:\\ONEDRIVE\\Desktop\\PTPM_BTL_MVVA\\Api.BanHang\\Api.BanMyPham.csproj",
+      "projectName": "Api.BanMyPham",
+      "projectPath": "D:\\ONEDRIVE\\Desktop\\PTPM_BTL_MVVA\\Api.BanHang\\Api.BanMyPham.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "D:\\ONEDRIVE\\Desktop\\PTPM_BTL_MVVA\\Api.BanHang\\obj\\",
       "projectStyle": "PackageReference",
