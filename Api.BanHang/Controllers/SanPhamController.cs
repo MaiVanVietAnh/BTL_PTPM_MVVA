@@ -1,4 +1,5 @@
-﻿using BusinessLogicLayer.Interfaces;
+﻿using BusinessLogicLayer;
+using BusinessLogicLayer.Interfaces;
 using DataModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,16 +10,38 @@ namespace Api.BanHang.Controllers
     [ApiController]
     public class SanPhamController : ControllerBase
     {
-        private IMatHangBusiness _mathangBusiness;
-        public SanPhamController(IMatHangBusiness mathangBusiness)
+        private ISanPhamBusiness _sanphamBusiness;
+        public SanPhamController(ISanPhamBusiness sanphamBusiness)
         {
-            _mathangBusiness = mathangBusiness;
+            _sanphamBusiness = sanphamBusiness;
         }
         [Route("get-by-id/{id}")]
         [HttpGet]
-        public SanPhamModel GetChiTietMatHang(string id)
+        public SanPhamModel GetDatabyID(string id)
         {
-            return _mathangBusiness.GetChiTietMatHang(id);
+            return _sanphamBusiness.GetDatabyID(id);
+        }
+        [Route("create-sanpham")]
+        [HttpPost]
+        public SanPhamModel CreateItem([FromBody] SanPhamModel model)
+        {
+            _sanphamBusiness.Create(model);
+            return model;
+        }
+        [Route("update-sanpham")]
+        [HttpPost]
+        public SanPhamModel UpdateItem([FromBody] SanPhamModel model)
+        {
+            _sanphamBusiness.Update(model);
+            return model;
+        }
+        
+        [Route("delete-sanpham")]
+        [HttpDelete]
+        public IActionResult DeleteItem(int id)
+        {
+            _sanphamBusiness.Delete(id);
+            return Ok(id);
         }
     }
 }

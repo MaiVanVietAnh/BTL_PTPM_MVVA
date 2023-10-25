@@ -13,8 +13,8 @@ namespace DataAccessLayer.Interfaces
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "TimKiemSanPham",
-                     "@MaSanPham,", id);
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "TimSanPhamTheoTen",
+                     "@TenSanPham", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<SanPhamModel>().FirstOrDefault();

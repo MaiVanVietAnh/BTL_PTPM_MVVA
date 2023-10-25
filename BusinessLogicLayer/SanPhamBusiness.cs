@@ -17,7 +17,8 @@ namespace BusinessLogicLayer
         {
             _res = res;
         }
-        public SanPhamModel GetDataById(string id)
+
+        public SanPhamModel GetDatabyID(string id)
         {
             return _res.GetDataById(id);
         }
@@ -33,5 +34,6 @@ namespace BusinessLogicLayer
         {
             return _res.Delete(id);
         }
+
     }
 }

@@ -9,7 +9,7 @@ namespace BusinessLogicLayer.Interfaces
 {
     public partial interface ISanPhamBusiness
     {
-        SanPhamModel GetDataById(string id);
+        SanPhamModel GetDatabyID(string id);
         bool Create(SanPhamModel model);
         bool Update(SanPhamModel model);
         bool Delete(int id);
