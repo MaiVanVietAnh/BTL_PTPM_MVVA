@@ -1,5 +1,7 @@
 using BusinessLogicLayer;
+using BusinessLogicLayer.Interfaces;
 using DataAccessLayer;
+using DataAccessLayer.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>

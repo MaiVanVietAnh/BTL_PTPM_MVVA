@@ -66,3 +66,5 @@ D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\BusinessLogicLayer\obj\Debug\net6.0\BusinessLo
 D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
 D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
 D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache

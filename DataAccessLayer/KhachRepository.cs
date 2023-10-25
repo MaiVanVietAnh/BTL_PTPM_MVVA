@@ -1,8 +1,7 @@
 ﻿using DataModel;
-
-namespace DataAccessLayer
+namespace DataAccessLayer.Interfaces
 {
-    public class KhachRepository:IKhachRepository
+    public class KhachRepository : IKhachRepository
     {
         private IDatabaseHelper _dbHelper;
         public KhachRepository(IDatabaseHelper dbHelper)
@@ -14,7 +13,7 @@ namespace DataAccessLayer
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "TimKiemKhachHangTheoID",
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "TimKiemKhachHang",
                      "@MaKhachHang", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
@@ -35,7 +34,7 @@ namespace DataAccessLayer
                 "@TenKhachHang", model.TenKhachHang,
                 "@DiaChi", model.DiaChi,
                 "@SoDienThoai", model.SoDienThoai,
-                "@Email", model.Email); 
+                "@Email", model.Email);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -52,11 +51,11 @@ namespace DataAccessLayer
             string msgError = "";
             try
             {
-                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_khach_update",
-                "@Id", model.MaKhachHang,
-                "@TenKH", model.TenKhachHang,
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "SuaKhachHang",
+                "@MaKhachHang", model.MaKhachHang,
+                "@TenKhachHang", model.TenKhachHang,
                 "@DiaChi", model.DiaChi,
-                "@SDT", model.SoDienThoai,
+                "@SoDienThoai", model.SoDienThoai,
                 "@Email", model.Email);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
@@ -69,7 +68,48 @@ namespace DataAccessLayer
                 throw ex;
             }
         }
+        public KhachModel delete(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "TimKiemKhachHang",
+                     "@MaKhachHang", id);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<KhachModel>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
+        public bool Delete(string id)
+        {
+            string msgError = "";
+            bool kq; // Khởi tạo mặc định là false
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedure(out msgError, "XoaKhachHang",
+                     "@MaKhachHang", id);
+                // Kiểm tra kết quả trả về từ hàm ExecuteScalarSProcedureWithTransaction
+                if (Convert.ToInt32(result) > 0)
+                {
+                    kq = true; // Xóa thành công, đặt kq thành true
+                }
+                else
+                {
+                    kq = false;
+                }
+                return kq;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
         public List<KhachModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, string dia_chi)
         {
             string msgError = "";

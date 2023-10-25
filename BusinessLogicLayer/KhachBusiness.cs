@@ -1,10 +1,11 @@
-﻿using BusinessLogicLayer;
+﻿using BusinessLogicLayer.Interfaces;
 using DataAccessLayer;
+using DataAccessLayer.Interfaces;
 using DataModel;
 
 namespace BusinessLogicLayer
 {
-    public class KhachBusiness:IKhachBusiness
+    public class KhachBusiness : IKhachBusiness
     {
         private IKhachRepository _res;
         public KhachBusiness(IKhachRepository res)
@@ -23,9 +24,14 @@ namespace BusinessLogicLayer
         {
             return _res.Update(model);
         }
+        public bool Delete(string id)
+        {
+            return _res.Delete(id);
+        }
+
         public List<KhachModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, string dia_chi)
         {
-            return _res.Search(pageIndex, pageSize,out total, ten_khach, dia_chi);
+            return _res.Search(pageIndex, pageSize, out total, ten_khach, dia_chi);
         }
     }
 }

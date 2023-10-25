@@ -254,3 +254,13 @@ D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\obj\Debug\net6.0\refint\Api.BanHan
 D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\obj\Debug\net6.0\Api.BanHang.pdb
 D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\obj\Debug\net6.0\Api.BanHang.genruntimeconfig.cache
 D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\obj\Debug\net6.0\ref\Api.BanHang.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

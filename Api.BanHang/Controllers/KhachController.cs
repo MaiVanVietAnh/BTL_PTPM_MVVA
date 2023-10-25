@@ -1,7 +1,8 @@
-﻿using BusinessLogicLayer;
+﻿using BusinessLogicLayer.Interfaces;
 using DataModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using DataAccessLayer.Interfaces;
 
 namespace Api.BanHang.Controllers
 {
@@ -14,7 +15,6 @@ namespace Api.BanHang.Controllers
         {
             _khachBusiness = khachBusiness;
         }
-
         [Route("get-by-id/{id}")]
         [HttpGet]
         public KhachModel GetDatabyID(string id)
@@ -62,7 +62,14 @@ namespace Api.BanHang.Controllers
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-            } 
+            }
+        }
+        [Route("delete-khach")]
+        [HttpDelete]
+        public IActionResult DeleteItem(string id)
+        {
+            _khachBusiness.Delete(id);
+            return Ok(id);
         }
     }
 }
