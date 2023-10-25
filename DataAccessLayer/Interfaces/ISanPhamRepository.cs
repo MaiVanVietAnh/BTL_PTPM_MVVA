@@ -13,6 +13,6 @@ namespace DataAccessLayer.Interfaces
         bool Create(SanPhamModel model);
         bool Update(SanPhamModel model);
         bool Delete(int id);
-        public List<ThongKeKhachModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, DateTime? to_NgayTao);
+        public List<SanPhamModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, DateTime? to_NgayTao);
     }
 }

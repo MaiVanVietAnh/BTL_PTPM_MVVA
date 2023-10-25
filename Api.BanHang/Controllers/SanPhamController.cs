@@ -21,7 +21,7 @@ namespace Api.BanHang.Controllers
         {
             return _sanphamBusiness.GetDatabyID(id);
         }
-        [Route("create-sanpham")]
+        [Route("create-SanPham")]
         [HttpPost]
         public SanPhamModel CreateItem([FromBody] SanPhamModel model)
         {

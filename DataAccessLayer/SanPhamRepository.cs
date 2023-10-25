@@ -13,8 +13,8 @@ namespace DataAccessLayer.Interfaces
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "TimSanPhamTheoTen",
-                     "@TenSanPham", id);
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "TimKiemSanPham",
+                     "@MaSanPham,", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<SanPhamModel>().FirstOrDefault();
@@ -96,7 +96,7 @@ namespace DataAccessLayer.Interfaces
             }
         }
 
-        public List<ThongKeKhachModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, DateTime? to_NgayTao)
+        public List<SanPhamModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, DateTime? to_NgayTao)
         {
             throw new NotImplementedException();
         }
