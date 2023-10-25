@@ -20,7 +20,7 @@ namespace DataAccessLayer
             try
             {
                 var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "TimKiemHoaDon",
-                     "@MaHoaDonBan", id);
+                "@MaHoaDonBan", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<HoaDonModel>().FirstOrDefault();
@@ -40,7 +40,7 @@ namespace DataAccessLayer
                 "@MaKhachHang", model.MaKhachHang,
                 "@NgayBan", model.NgayBan,
                 "@ThanhTien", model.ThanhTien,
-                "@list_json_chitietdonhangban", model.list_json_chitiethoadonban != null ? MessageConvert.SerializeObject(model.list_json_chitiethoadonban) : null);
+                "@list_json_chitietdonhangban", model.list_json_chitietdonhangban != null ? MessageConvert.SerializeObject(model.list_json_chitietdonhangban) : null);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -62,7 +62,7 @@ namespace DataAccessLayer
                 "@MaKhachHang", model.MaKhachHang,
                 "@NgayBan", model.NgayBan,
                 "@ThanhTien", model.ThanhTien,
-                "@list_json_chitietdonhangban", model.list_json_chitiethoadonban != null ? MessageConvert.SerializeObject(model.list_json_chitiethoadonban) : null);
+                "@list_json_chitietdonhangban", model.list_json_chitietdonhangban != null ? MessageConvert.SerializeObject(model.list_json_chitietdonhangban) : null);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
