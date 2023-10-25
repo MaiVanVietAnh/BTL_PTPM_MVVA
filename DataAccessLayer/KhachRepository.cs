@@ -68,22 +68,7 @@ namespace DataAccessLayer.Interfaces
                 throw ex;
             }
         }
-        public KhachModel delete(string id)
-        {
-            string msgError = "";
-            try
-            {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "TimKiemKhachHang",
-                     "@MaKhachHang", id);
-                if (!string.IsNullOrEmpty(msgError))
-                    throw new Exception(msgError);
-                return dt.ConvertTo<KhachModel>().FirstOrDefault();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+     
 
         public bool Delete(string id)
         {
