@@ -21,22 +21,22 @@ END;
 
 --Thêm
 ALTER PROCEDURE ThemHoaDonBan
-(@MaKhachHang   NVARCHAR(50),
- @NgayBan		datetime,
- @ThanhTien     float,
+(@MaKhachHang     CHAR(10), 
+ @NgayBan		  datetime,
+ @ThanhTien       float,
  @list_json_chitietdonhangban NVARCHAR(MAX)
 )
 AS
     BEGIN
 		DECLARE @MaHoaDonBan INT;
         INSERT INTO HoaDonBan
-                (MaKhachHang , 
-				 NgayBan,
-                 ThanhTien             
+                (MaKhachHang, 
+                 NgayBan, 
+                 ThanhTien               
                 )
                 VALUES
                 (@MaKhachHang, 
-				 @NgayBan, 
+                 @NgayBan, 
                  @ThanhTien
                 );
 
@@ -46,12 +46,12 @@ AS
                         INSERT INTO ChiTietHoaDonBan
 						 (MaSanPham, 
 						  MaHoaDonBan,
-                          SoLuong, 
-                          GiaBan               
+                          SoLuongBan, 
+                          GiaBan              
                         )
                     SELECT JSON_VALUE(p.value, '$.MaSanPham'), 
                             @MaHoaDonBan, 
-                            JSON_VALUE(p.value, '$.soLuong'), 
+                            JSON_VALUE(p.value, '$.slBan'), 
                             JSON_VALUE(p.value, '$.giaBan')    
                     FROM OPENJSON(@list_json_chitietdonhangban) AS p;
                 END;
@@ -76,16 +76,91 @@ BEGIN
 END
 
 -- Xóa
-CREATE PROCEDURE XoaHoaDonBan
-    @MaHoaDonBan char(10)
+ALTER PROCEDURE XoaHoaDonBan
+    @MaHoaDonBan int
 AS
 BEGIN
-    DELETE FROM HoaDonBan
-    WHERE MaHoaDonBan = @MaHoaDonBan
+    -- Kiểm tra xem MaHoaDonBan có tồn tại không
+    IF EXISTS (SELECT 1 FROM HoaDonBan WHERE MaHoaDonBan = @MaHoaDonBan)
+    BEGIN
+        -- Xóa chi tiết hóa đơn bán liên quan	
+        DELETE FROM ChiTietHoaDonBan WHERE MaHoaDonBan = @MaHoaDonBan;
+        
+        -- Xóa hóa đơn bán
+        DELETE FROM HoaDonBan WHERE MaHoaDonBan = @MaHoaDonBan;
+        
+        PRINT 'Hóa đơn bán đã được xóa thành công.';
+    END
+    ELSE
+    BEGIN
+        PRINT 'Không tìm thấy hóa đơn bán có MaHoaDonBan = ' + CAST(@MaHoaDonBan AS nvarchar);
+    END
 END
 
+--exec XoaHoaDonBan'4'
 
---Thủ tục--
+--------
+ALTER PROCEDURE SuaHoaDonBan
+		(@MaHoaDonBan char(10),
+		@MaKhachHang char(10),
+		@NgayBan datetime,
+		@ThanhTien float,
+		@list_json_chitietdonhangban NVARCHAR(MAX))
+AS
+    BEGIN
+		UPDATE HoaDonBan
+		SET
+			MaKhachHang  = @MaKhachHang ,
+			NgayBan = @NgayBan,
+			ThanhTien = @ThanhTien
+		WHERE MaHoaDonBan = @MaHoaDonBan;
+		
+		IF(@list_json_chitietdonhangban IS NOT NULL) 
+		BEGIN
+			 -- Insert data to temp table 
+		   SELECT
+			  JSON_VALUE(p.value, '$.maChiTietHoaDon') as maChiTietHoaDonBan,
+			  JSON_VALUE(p.value, '$.maHoaDonBan') as maHoaDonBan,
+			  JSON_VALUE(p.value, '$.maSanPham') as maSanPham,
+			  JSON_VALUE(p.value, '$.soLuong') as soLuong,
+			  JSON_VALUE(p.value, '$.giaBan') as giaBan,
+			  JSON_VALUE(p.value, '$.status') as status
+			  INTO #Results 
+		   FROM OPENJSON(@list_json_chitietdonhangban) AS p;
+		 
+		 -- Insert data to table with STATUS = 1;
+			INSERT INTO ChiTietHoaDonBan (MaSanPham, 
+						  MaHoaDonBan,
+                          SoLuong, 
+                          GiaBan ) 
+			   SELECT
+				  #Results.MaSanPham,
+				  @MaHoaDonBan,
+				  #Results.soLuong,
+				  #Results.GiaBan			 
+			   FROM  #Results 
+			   WHERE #Results.status = '1' 
+			
+			-- Update data to table with STATUS = 2
+			  UPDATE ChiTietHoaDonBan 
+			  SET
+				 SoLuong = #Results.soLuong,
+				 GiaBan = #Results.giaBan
+			  FROM #Results 
+			  WHERE  ChiTietHoaDonBan.maChiTietHoaDonBan = #Results.maChiTietHoaDonban AND #Results.status = '2';
+			
+			-- Delete data to table with STATUS = 3
+			DELETE C
+			FROM ChiTietHoaDonBan C
+			INNER JOIN #Results R
+				ON C.maChiTietHoaDonBan=R.maChiTietHoaDonBan
+			WHERE R.status = '3';
+			DROP TABLE #Results;
+		END;
+        SELECT '';
+    END;
+
+
 
 --Khách HÀng
 
@@ -144,30 +219,39 @@ END
 
 ------------Thủ tục với Tai Khoản------------
 
-create PROCEDURE login1(@taikhoan nvarchar(50), @matkhau nvarchar(50))
+--alter PROCEDURE login(@taikhoan nvarchar(50), @matkhau nvarchar(50))
+--AS
+--    BEGIN
+--      SELECT  *
+--      FROM TaiKhoan
+--      where TenTaiKhoan= @taikhoan and MatKhau = @matkhau;
+--    END;
+
+alter PROCEDURE login(@taikhoan nvarchar(50), @matkhau nvarchar(50))
 AS
     BEGIN
-      SELECT  *
-      FROM TaiKhoan
-      where TenTaiKhoan= @taikhoan and MatKhau = @matkhau;
-    END;
-
-	exec login1 'admin1','123'
-
+      SELECT h.*, 
+		(
+			SELECT c.*
+			FROM ChiTietTaiKhoan AS c
+			WHERE h.TenTaiKhoan = c.HoTen FOR JSON PATH
+		) AS list_json_chitiettaikhoan
+    FROM TaiKhoan AS h
+    WHERE h.TenTaiKhoan= @taikhoan and h.MatKhau = @matkhau ;
+END;
 
 
 --------------THủ tục với sản phẩm--
 --tìm theo tên sản phẩm
 
-ALTER PROCEDURE TimSanPhamTheoTen
-    @TenSanPham nvarchar(250)
+alter PROCEDURE TimKiemSanPham
+    @MaSanPham char(10)
 AS
 BEGIN
     SELECT *
     FROM SanPham
-    WHERE TenSanPham = @TenSanPham;
-END;
-
+    WHERE MaSanPham = @MaSanPham
+END
 
 
 --Thêm
@@ -205,4 +289,32 @@ AS
 BEGIN
     DELETE FROM SanPham
     WHERE MaSanPham = @MaSanPham;
+END;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----API.NguoiDung
+--Tìm sp theo tên
+CREATE PROCEDURE TimSanPhamTheoTen
+    @TenSanPham NVARCHAR(250)
+AS
+BEGIN
+    SELECT MaSanPham, TenSanPham, SoLuong, Gia
+    FROM SanPham
+    WHERE TenSanPham = @TenSanPham;
 END;

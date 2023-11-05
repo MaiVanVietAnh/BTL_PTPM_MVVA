@@ -14,7 +14,7 @@ namespace DataAccessLayer.Interfaces
             try
             {
                 var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "TimKiemSanPham",
-                     "@MaSanPham,", id);
+                     "@MaSanPham", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<SanPhamModel>().FirstOrDefault();

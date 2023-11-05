@@ -74,7 +74,6 @@ D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\obj\Debug\net6.0\Api.BanMyPham.Gen
 D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\obj\Debug\net6.0\Api.BanMyPham.AssemblyInfoInputs.cache
 D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\obj\Debug\net6.0\Api.BanMyPham.AssemblyInfo.cs
 D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\obj\Debug\net6.0\Api.BanMyPham.csproj.CoreCompileInputs.cache
-D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\obj\Debug\net6.0\Api.BanMyPham.MvcApplicationPartsAssemblyInfo.cs
 D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\obj\Debug\net6.0\Api.BanMyPham.MvcApplicationPartsAssemblyInfo.cache
 D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\obj\Debug\net6.0\staticwebassets\msbuild.Api.BanMyPham.Microsoft.AspNetCore.StaticWebAssets.props
 D:\ONEDRIVE\Desktop\PTPM_BTL_MVVA\Api.BanHang\obj\Debug\net6.0\staticwebassets\msbuild.build.Api.BanMyPham.props

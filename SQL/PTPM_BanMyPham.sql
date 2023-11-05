@@ -8,11 +8,11 @@ create table LoaiSanPham(
 );
 
 create table SanPham(
-MaSanPham char(10) primary key,
-MaLoai char(10) foreign key references LoaiSanPham(MaLoai),
-TenSanPham nvarchar(250) not null,
-SoLuong int,
-Gia int,
+	MaSanPham char(10) primary key,
+	MaLoai char(10) foreign key references LoaiSanPham(MaLoai),
+	TenSanPham nvarchar(250) not null,
+	SoLuong int,
+	Gia int,
 );
 
 create table KhachHang(
@@ -65,7 +65,7 @@ create table ChiTietHoaDonBan(
 	MaChiTietHoaDonBan int identity(1,1) not null primary key,
 	MaHoaDonBan int,
 	MaSanPham char(10),
-	SoLuong int, 
+	SoLuongBan int,	
 	GiaBan float,
 	FOREIGN KEY (MaHoaDonBan) REFERENCES HoaDonBan (MaHoaDonBan) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY (MaSanPham) REFERENCES SanPham (MaSanPham) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -138,18 +138,20 @@ VALUES
 
 INSERT INTO TaiKhoan (MaTaiKhoan, MaLoai, TenTaiKhoan, MatKhau,Email)
 VALUES
-    ('1', '1', 'admin1', '123','hghrhg@gmail.com'),
-	('2', '2', 'use', '1234','gredfg@gmail.com')
+    ('1', '1', 'admin', '123','vietanh@gmail.com'),
+	('2', '2', 'user', '123','ptp@gmail.com'),
+	('3', '2', 'vanh', '123','vanh@gmail.com'),
+	('4', '2', 'nhat', '123','nhat@gmail.com')
 
 INSERT INTO LoaiTk (MaLoai, TenLoai, MoTa)
 VALUES
     ('1', 'admin', 'quan ly'),
-	('2', 'use', 'nguoi dung')
+	('2', 'user', 'nguoi dung')
 
 INSERT INTO ChiTietTaiKhoan (MaChitietTaiKhoan, MaTaiKhoan, HoTen,DiaChi,SoDienThoai)
 VALUES
-    ('1', '1', 'Vanh','VanGiang','0987654321'),
-	('2', '2', 'Phuong','HungYen','0984654321')
+    ('1', '1', 'Vanh','ThaiBinh','0987654321'),
+	('2', '2', 'Phuong','ThaiBinh','0984654321')
 
 
 -- Thêm dữ liệu mẫu cho bảng HoaDonBan

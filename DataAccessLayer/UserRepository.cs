@@ -20,7 +20,7 @@ namespace DataAccessLayer
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "login1",
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "login",
                      "@taikhoan", taikhoan,
                      "@matkhau", matkhau
                      );

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "1OFZntDfsLZYnXmnvlsSWfyzmrjxDHHqilG4M+EbpL0=",
+  "Source": "Api.NguoiDung",
+  "BasePath": "_content/Api.NguoiDung",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

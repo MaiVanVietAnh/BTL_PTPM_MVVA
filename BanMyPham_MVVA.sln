@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.BanMyPham", "Api.BanHan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataModel", "DataModel\DataModel.csproj", "{4120301B-F1D5-4558-A95A-F9945D9C5413}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.NguoiDung", "Api.NguoiDung\Api.NguoiDung.csproj", "{B93A392D-76A3-4ECD-A289-5B9EB0E21E2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4120301B-F1D5-4558-A95A-F9945D9C5413}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4120301B-F1D5-4558-A95A-F9945D9C5413}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4120301B-F1D5-4558-A95A-F9945D9C5413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B93A392D-76A3-4ECD-A289-5B9EB0E21E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93A392D-76A3-4ECD-A289-5B9EB0E21E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93A392D-76A3-4ECD-A289-5B9EB0E21E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93A392D-76A3-4ECD-A289-5B9EB0E21E2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
