@@ -218,16 +218,18 @@ END
 
 
 ------------Thủ tục với Tai Khoản------------
-
---alter PROCEDURE login(@taikhoan nvarchar(50), @matkhau nvarchar(50))
---AS
---    BEGIN
---      SELECT  *
---      FROM TaiKhoan
---      where TenTaiKhoan= @taikhoan and MatKhau = @matkhau;
---    END;
-
+--người dùng đăng nhập--
 alter PROCEDURE login(@taikhoan nvarchar(50), @matkhau nvarchar(50))
+AS
+    BEGIN
+      SELECT  *
+      FROM TaiKhoan
+      where TenTaiKhoan= @taikhoan and MatKhau = @matkhau;
+    END;
+
+
+--admin kiểm tra tài khoản---
+Create PROCEDURE login1(@taikhoan nvarchar(50), @matkhau nvarchar(50))
 AS
     BEGIN
       SELECT h.*, 
@@ -239,6 +241,17 @@ AS
     FROM TaiKhoan AS h
     WHERE h.TenTaiKhoan= @taikhoan and h.MatKhau = @matkhau ;
 END;
+
+---Đăng ký tài khoản ( người dùng)--
+CREATE PROCEDURE DangKy
+	@TenTaiKhoan nvarchar(50),
+	@MatKhau nvarchar(50),
+	@Email nvarchar(150)
+AS
+BEGIN
+    INSERT INTO TaiKhoan(MaLoai, TenTaiKhoan, MatKhau, Email)
+    VALUES (2, @TenTaiKhoan, @MatKhau, @Email)
+END
 
 
 --------------THủ tục với sản phẩm--

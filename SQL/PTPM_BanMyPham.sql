@@ -75,7 +75,7 @@ create table ChiTietHoaDonBan(
 
 create table TaiKhoan
 (
-	MaTaiKhoan int primary key,
+	MaTaiKhoan int identity(1,1) not null primary key,
 	MaLoai int,
 	TenTaiKhoan nvarchar(50) NULL,
 	MatKhau nvarchar(50) NULL,
@@ -136,12 +136,12 @@ VALUES
     (4,N'Công ty D', N'101 Đường MNO, Quận JKL', '0754623987'),
     (5,N'Công ty E', N'222 Đường LMN, Quận PQR', '0923456710');
 
-INSERT INTO TaiKhoan (MaTaiKhoan, MaLoai, TenTaiKhoan, MatKhau,Email)
+INSERT INTO TaiKhoan (MaLoai, TenTaiKhoan, MatKhau,Email)
 VALUES
-    ('1', '1', 'admin', '123','vietanh@gmail.com'),
-	('2', '2', 'user', '123','ptp@gmail.com'),
-	('3', '2', 'vanh', '123','vanh@gmail.com'),
-	('4', '2', 'nhat', '123','nhat@gmail.com')
+    ('1', 'admin', '123','vietanh@gmail.com'),
+	('2', 'user', '123','ptp@gmail.com'),
+	('2', 'vanh', '123','vanh@gmail.com'),
+	('2', 'nhat', '123','nhat@gmail.com')
 
 INSERT INTO LoaiTk (MaLoai, TenLoai, MoTa)
 VALUES

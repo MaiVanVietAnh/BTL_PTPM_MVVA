@@ -10,5 +10,6 @@ namespace BusinessLogicLayer.Interfaces
     public partial interface IHomeBusiness
     {
         HomeModel Login(string taikhoan, string matkhau);
+        bool Register(HomeModel model);
     }
 }

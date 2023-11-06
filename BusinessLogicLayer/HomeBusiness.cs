@@ -53,5 +53,9 @@ namespace BusinessLogicLayer
             user.token = tokenHandler.WriteToken(token);
             return user;
         }
+        public bool Register(HomeModel model)
+        {
+            return _res.Register(model);
+        }
     }
 }

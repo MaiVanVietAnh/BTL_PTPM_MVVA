@@ -20,13 +20,34 @@ namespace DataAccessLayer
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "login1",
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "login",
                      "@taikhoan", taikhoan,
                      "@matkhau", matkhau
                      );
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<HomeModel>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool Register(HomeModel model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "DangKy",
+                    "@TenTaiKhoan", model.TenTaiKhoan,
+                    "@MatKhau", model.MatKhau,
+                    "@Email", model.Email
+                    );
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
             }
             catch (Exception ex)
             {
