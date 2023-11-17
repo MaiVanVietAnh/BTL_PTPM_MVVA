@@ -7,10 +7,10 @@ namespace Api.BanHang.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class TaiKhoanController : ControllerBase
     {
-        private IUserBusiness _userBusiness;
-        public UserController(IUserBusiness userBusiness)
+        private ITaiKhoanBusiness _userBusiness;
+        public TaiKhoanController(ITaiKhoanBusiness userBusiness)
         {
             _userBusiness = userBusiness;
         }

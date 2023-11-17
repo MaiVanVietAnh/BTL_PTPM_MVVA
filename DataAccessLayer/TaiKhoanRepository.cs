@@ -8,14 +8,14 @@ using DataModel;
 
 namespace DataAccessLayer
 {
-    public class UserRepository : IUserRepository
+    public class TaiKhoanRepository : ITaiKhoanRepository
     {
         private IDatabaseHelper _dbHelper;
-        public UserRepository(IDatabaseHelper dbHelper)
+        public TaiKhoanRepository(IDatabaseHelper dbHelper)
         {
             _dbHelper = dbHelper;
         }
-        public UserModel Login(string taikhoan, string matkhau)
+        public TaiKhoanModel Login(string taikhoan, string matkhau)
         {
             string msgError = "";
             try
@@ -26,7 +26,7 @@ namespace DataAccessLayer
                      );
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
-                return dt.ConvertTo<UserModel>().FirstOrDefault();
+                return dt.ConvertTo<TaiKhoanModel>().FirstOrDefault();
             }
             catch (Exception ex)
             {

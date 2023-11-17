@@ -49,8 +49,8 @@ namespace BusinessLogicLayer
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            user.token = tokenHandler.WriteToken(token);
+            //var token = tokenHandler.CreateToken(tokenDescriptor);
+            //user.token = tokenHandler.WriteToken(token);
             return user;
         }
         public bool Register(HomeModel model)

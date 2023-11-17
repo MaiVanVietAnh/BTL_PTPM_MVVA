@@ -18,10 +18,12 @@ builder.Services.AddTransient<IKhachRepository, KhachRepository>();
 builder.Services.AddTransient<IKhachBusiness, KhachBusiness>();
 builder.Services.AddTransient<IHoaDonRepository, HoaDonRepository>();
 builder.Services.AddTransient<IHoaDonBusiness, HoaDonBusiness>();
-builder.Services.AddTransient<IUserRepository, UserRepository>();
-builder.Services.AddTransient<IUserBusiness, UserBusiness>();
+builder.Services.AddTransient<ITaiKhoanRepository, TaiKhoanRepository>();
+builder.Services.AddTransient<ITaiKhoanBusiness, TaiKhoanBusiness>();
 builder.Services.AddTransient<ISanPhamRepository, SanPhamRepository>();
 builder.Services.AddTransient<ISanPhamBusiness, SanPhamBusiness>();
+builder.Services.AddTransient<INhanVienRepository, NhanVienRepository>();
+builder.Services.AddTransient<INhanVienBusiness, NhanVienBusiness>();
 
 // configure strongly typed settings objects
 IConfiguration configuration = builder.Configuration;

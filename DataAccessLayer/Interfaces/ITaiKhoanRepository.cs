@@ -7,8 +7,8 @@ using DataModel;
 
 namespace DataAccessLayer.Interfaces
 {
-    public partial interface IUserRepository
+    public partial interface ITaiKhoanRepository
     {
-        UserModel Login(string taikhoan, string matkhau);
+        TaiKhoanModel Login(string taikhoan, string matkhau);
     }
 }

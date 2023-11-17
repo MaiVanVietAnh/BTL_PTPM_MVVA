@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataModel
 {
-    public class UserModel
+    public class TaiKhoanModel
     {
         public int MaTaiKhoan { get; set; }
         public int MaLoai { get; set; }

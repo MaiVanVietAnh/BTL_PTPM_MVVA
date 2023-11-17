@@ -15,17 +15,17 @@ using DataAccessLayer;
 
 namespace BusinessLogicLayer
 {
-    public class UserBusiness : IUserBusiness
+    public class TaiKhoanBusiness : ITaiKhoanBusiness
     {
-        private IUserRepository _res;
+        private ITaiKhoanRepository _res;
         private string secret;
-        public UserBusiness(IUserRepository res, IConfiguration configuration)
+        public TaiKhoanBusiness(ITaiKhoanRepository res, IConfiguration configuration)
         {
             _res = res;
             secret = configuration["AppSettings:Secret"];
         }
 
-        public UserModel Login(string taikhoan, string matkhau)
+        public TaiKhoanModel Login(string taikhoan, string matkhau)
         {
             var user = _res.Login(taikhoan, matkhau);
             if (user == null)

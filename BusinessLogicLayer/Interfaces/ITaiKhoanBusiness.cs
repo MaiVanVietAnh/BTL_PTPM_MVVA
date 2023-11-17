@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Interfaces
 {
-    public partial interface IUserBusiness
+    public partial interface ITaiKhoanBusiness
     {
-        UserModel Login(string taikhoan, string matkhau);
+        TaiKhoanModel Login(string taikhoan, string matkhau);
     }
 }
